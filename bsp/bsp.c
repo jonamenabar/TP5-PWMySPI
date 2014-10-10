@@ -6,6 +6,7 @@
 #include "stm32f4xx_exti.h"		// Controlador interrupciones externas
 #include "stm32f4xx_syscfg.h"	// configuraciones Generales
 #include "stm32f4xx_adc.h"      // libreria de ADC
+#include "stm32f4xx_usart.h"    // libreria de USART
 #include "misc.h"				// Vectores de interrupciones (NVIC)
 #include "bsp.h"
 //defino los leds
@@ -43,6 +44,7 @@ void led_off(uint8_t led) {
 
 //funciones de configuracion
 void bsp_led_init();
+void bsp_USART_init();
 
 
 void bsp_init() {
@@ -121,11 +123,78 @@ uint16_t bsp_conversor_ADC(void) {
 
 uint8_t porcentaje_potenciometro(uint16_t valor) {
 
-	uint8_t porcentaje;
+	uint8_t porcentaje; //lo veo como entero
 
 porcentaje=(valor*100)/4096;
 
 return(porcentaje);
+
+}
+
+
+//CREO LA FUNCION PARA CONFIGURAR LA  UART
+void bsp_USART_init(){
+//defino las estructuras
+USART_InitTypeDef USART_InitStructure;
+GPIO_InitTypeDef GPIO_InitStructure;
+
+   // Habilito Clocks
+RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+
+   // Configuro Pin TX
+GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+GPIO_PinAFConfig(GPIOD, GPIO_PinSource8, GPIO_AF_USART3);
+
+   //  Configuro Pin RX
+GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+GPIO_Init(GPIOD, &GPIO_InitStructure);
+
+GPIO_PinAFConfig(GPIOD, GPIO_PinSource9, GPIO_AF_USART3);
+
+	//Configuro UART
+USART_InitStructure.USART_BaudRate = 9600;
+USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+USART_InitStructure.USART_StopBits = USART_StopBits_1;
+USART_InitStructure.USART_Parity = USART_Parity_No;
+USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
+USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+
+    // Inicializo la USART
+USART_Init(USART3, &USART_InitStructure);
+
+    // Habilito la Usart
+USART_Cmd(USART3, ENABLE);
+
+    // Habilito la Interrupcion por RX
+
+		// USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+
+}
+
+
+
+//creo una funcion para enviar los datos y estos datos son de tipo char (un puntero de char)
+void enviar_string (char* datos ){
+
+
+
+USART_SendData (USART3, (uin16_t)*datos);//debo castear el dato par que sea un entero de 16bits
+
+
+
+
+
+
+
+
 
 }
 
