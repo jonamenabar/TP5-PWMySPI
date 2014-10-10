@@ -14,69 +14,60 @@ void ledPulso(uint8_t led, uint32_t tiempo);
  */
 int main(void) {
 	bsp_init();
-	int brillo = 0;
-	int flag = 0;
-    int minimo=511;
-    int TESTING=0;//es una variable para re asignr y poder ver que parte funciona y cual no.
+
+
+
+	int TESTING = 0; //es una variable para re asignr y poder ver que parte funciona y cual no.
+	int valor_del_conversor=0;
+	int porcentaje=0;
 
 	while (1) {
-		/*bsp_delayMs(100);
+		//LLAMO A LA FUNCION DEL CONVERSOR Y LO GUARDO EN UNA VARIABLE
+		valor_del_conversor = bsp_conversor_ADC();
+		//LLAMO A LA FUNCION DE PROCENTAJE DE POTENCIOMETRO Y LE PASO EL VALOR DE LA CONVERSION (la funcion va a devolver el valor ya convertido en porcentaje)
+		porcentaje = porcentaje_potenciometro(valor_del_conversor);
 
-		led_setBright(0,brillo);
-		led_setBright(1,brillo);
-		led_setBright(2,brillo);
-		led_setBright(3,brillo);
 
-		if(brillo >= 100)
-			flag = 0;
-		if(brillo <=0)
-			flag = 1;
-
-		if(flag)
-			brillo++;
-		else
-			brillo--; */
-		//TESTING=bsp_conversor_ADC();
-//aca hago una negrada para prender los leds
-		//if (bsp_conversor_ADC() <= minimo)
+		if (porcentaje >= 12) {
+			led_on(0);
+		} else {
+			led_off(0);
+		}
+		if (porcentaje >= 25) {
+			led_on(1);
+		} else {
+			led_off(1);
+		}
+		if (porcentaje >= 37) {
+			led_on(2);
+		} else {
+			led_off(2);
+		}
+		if (porcentaje >= 50) {
+			led_on(3);
+		} else {
+			led_off(3);
+		}
+		if (porcentaje >= 62) {
+			led_on(4);
+		} else {
+			led_off(4);
+		}
+		if (porcentaje >= 75) {
 			led_on(5);
-
-		/*else
-			led_off(1);*/
+		} else {
+			led_off(5);
+		}
+		if (porcentaje >= 87) {
+			led_on(6);
+		} else {
+			led_off(6);
+		}
+		if (porcentaje >= 90) {
+			led_on(7);
+		} else {
+			led_off(7);
+		}
 
 	}
 }
-
-/**
- * @brief Se preciono el pulsador
- *
- */
-void APP_ISR_sw(void){
-
-}
-
-/**
- * @brief Interrupcion cada 1ms
- *
- */
-void APP_ISR_1ms(void){
-	static uint16_t count_1s = 1000;
-	count_1s--;
-	if (!count_1s) {
-		led_toggle(0);
-		count_1s = 1000;
-	}
-}
-
-
-void ledPulso(uint8_t led, uint32_t tiempo){
-	led_on(led);
-	Delay(tiempo);
-	led_off(led);
-}
-
-
-
-
-
-
