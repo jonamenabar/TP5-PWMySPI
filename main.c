@@ -1,12 +1,8 @@
 #include <stdint.h>
 #include "bsp/bsp.h"
 
-/**
- * @brief Se encarga de prender un led y apagarlo luego de un tiempo
- *
- * @param led    Numero de led a pulsar
- * @param tiempo Numero de ciclos del delay entre prendido y apagado
- */
+
+
 void ledPulso(uint8_t led, uint32_t tiempo);
 
 /**

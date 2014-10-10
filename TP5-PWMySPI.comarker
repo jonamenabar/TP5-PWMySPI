@@ -19,8 +19,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="false" persistant="true" registered="true">
@@ -39,8 +39,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TP5-PWMySPI"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:/Users/mm/Desktop/TP5-PWMySPI/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="false"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="false" persistant="true" registered="true">
@@ -59,8 +59,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TP5-PWMySPI"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:/Users/mm/Desktop/TP5-PWMySPI/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="false"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="false" persistant="true" registered="true">
@@ -79,8 +79,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TP5-PWMySPI"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:/Users/mm/Desktop/TP5-PWMySPI/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="false"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="false" persistant="true" registered="true">
@@ -99,8 +99,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TP5-PWMySPI"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:/Users/mm/Desktop/TP5-PWMySPI/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="false"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="false" persistant="true" registered="true">
@@ -119,13 +119,13 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TP5-PWMySPI"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="C:/Users/mm/Desktop/TP5-PWMySPI/main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="false"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
 <resource path="/TP5-PWMySPI/main.c" type="1"/>
-<marker lineNumber="36" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<marker lineNumber="32" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
 <attrib name="enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
 <attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
@@ -139,8 +139,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TP5-PWMySPI/main.c"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\FACULTAD\CURSOS\DIPLOMATURA EN SISTEMAS EMBEBIDOS\PRACTICO DE PRUEBA ADC\TP5 MODIFICADO ADC\main.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 </breakpoints>

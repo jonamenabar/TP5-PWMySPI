@@ -20,13 +20,13 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" title="main.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" title="main.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP5-PWMySPI/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1342" selectionTopPixel="301"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="43" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.c" partName="bsp.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" title="bsp.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.c" partName="bsp.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" title="bsp.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP5-PWMySPI/bsp/bsp.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="87" selectionOffset="1217" selectionTopPixel="511"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1267" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.h" partName="bsp.h" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.h" title="bsp.h" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP5-PWMySPI/bsp/bsp.h"/>
@@ -256,10 +256,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/bsp/bsp.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/bsp/bsp.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/main.c"/>
 </editors>
-<item historyLabel="bsp.c" index="1">
-<position info="not_deleted" x="7039" y="23"/>
-</item>
 <item historyLabel="main.c" index="0">
 <position info="not_deleted" x="620" y="0"/>
 </item>
@@ -404,8 +402,11 @@
 <item historyLabel="main.c" index="9">
 <position info="not_deleted" x="1342" y="0"/>
 </item>
-<item active="true" historyLabel="bsp.c" index="10">
+<item historyLabel="bsp.c" index="10">
 <position info="not_deleted" x="1546" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="12">
+<position info="not_deleted" x="1155" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
