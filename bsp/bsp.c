@@ -192,6 +192,7 @@ void enviar_string(char* datos) {
 		}
 	}
 }
+
 //creo una funcion para obtener cuantos led quiero encender y apagar.
 uint8_t relacion_porcentaje_led(uint8_t porcentaje) {
 

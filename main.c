@@ -32,6 +32,7 @@ int main(void) {
 			led_off(i);
 		}
 
+
 		//el siguiente if, es para no estar enviando constantemente el dato, sino, solo cuando se mueva,y estableci un rango de seguridad, 99+-1 y 99+-2 osea que la variacion de % debe ser de un 4%
 
 		if (porcentaje != previo_porcentaje
