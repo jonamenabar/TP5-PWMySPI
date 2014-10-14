@@ -36,4 +36,7 @@ uint16_t bsp_conversor_ADC (void) ;
 //prototipo de funcion USART
 void bsp_USART_init();
 
+//prototipo de funcion, para convertir porcentaje en led y poder usarlo en el ciclo for.
+uint8_t relacion_porcentaje_led(uint8_t porcentaje);
+
 #endif

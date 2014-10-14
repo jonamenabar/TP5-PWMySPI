@@ -179,7 +179,7 @@ void enviar_string(char* datos) {
 	//	while (USART_GetFlagStatus(USART3, USART_SR_TXE) == 0 )
 	//USART_GetFlagStatus!=RESET
 
-	USART_ClearFlag(USART3,USART_FLAG_TC==0); //limpio la bandera
+	USART_ClearFlag(USART3, USART_FLAG_TC == 0); //limpio la bandera
 
 	for (i = 0; i <= 18; i++) {
 
@@ -192,4 +192,13 @@ void enviar_string(char* datos) {
 		}
 	}
 }
+//creo una funcion para obtener cuantos led quiero encender y apagar.
+uint8_t relacion_porcentaje_led(uint8_t porcentaje) {
 
+	int n_led;
+
+	n_led = porcentaje / 13; //deberia ser 12.5 pero por alguna razon, funciona mejor con 13
+
+	return (n_led);
+
+}
