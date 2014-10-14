@@ -21,13 +21,13 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.c" partName="bsp.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" title="bsp.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.c" partName="bsp.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" title="bsp.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP5-PWMySPI/bsp/bsp.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5431" selectionTopPixel="1021"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5431" selectionTopPixel="2506"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" title="main.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" title="main.c" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP5-PWMySPI/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1195" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1195" selectionTopPixel="196"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="bsp.h" partName="bsp.h" path="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.h" title="bsp.h" tooltip="D:/FACULTAD/CURSOS/DIPLOMATURA EN SISTEMAS EMBEBIDOS/PRACTICO DE PRUEBA ADC/TP5 MODIFICADO ADC/bsp/bsp.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TP5-PWMySPI/bsp/bsp.h"/>
@@ -44,6 +44,9 @@
 <ExpressionKeySet ExpKeys=""/>
 </viewState>
 </view>
+<view id="org.coocox.component.ui.ComponentView" partName="Components">
+<viewState/>
+</view>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
 <viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="1" verticalPosition="0">
 <expanded>
@@ -56,9 +59,6 @@
 <element path="/TP5-PWMySPI/bsp/bsp.h"/>
 </selection>
 </viewState>
-</view>
-<view id="org.coocox.component.ui.ComponentView" partName="Components">
-<viewState/>
 </view>
 <view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
 <viewState/>
@@ -131,7 +131,7 @@
 <layout>
 <mainWindow>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@17509be">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.coocox.component.ui.ComponentView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -143,14 +143,14 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@f63eec" ratio="0.6993939" ratioLeft="577" ratioRight="248" relationship="4" relative="org.eclipse.ui.internal.ViewStack@17509be">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.coocox.builder.ui.exampleView" ratio="0.16457565" ratioLeft="223" ratioRight="1132" relationship="2" relative="org.eclipse.ui.internal.ViewStack@17509be"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@31edb0" ratio="0.69707704" ratioLeft="787" ratioRight="342" relationship="2" relative="org.coocox.builder.ui.exampleView">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.coocox.component.ui.Help" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
@@ -161,7 +161,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44969696" ratioLeft="371" ratioRight="454" relationship="4" relative="org.coocox.builder.ui.exampleView"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@d2b042" ratio="0.36969697" ratioLeft="305" ratioRight="520" relationship="4" relative="org.eclipse.ui.internal.ViewStack@17509be">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.coocox.builder.ui.views.ProjectView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -276,22 +276,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/bsp/bsp.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/bsp/bsp.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/bsp/bsp.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TP5-PWMySPI/main.c"/>
 </editors>
-<item historyLabel="bsp.c" index="0">
-<position info="not_deleted" x="5726" y="0"/>
-</item>
-<item historyLabel="bsp.c" index="0">
-<position info="not_deleted" x="5769" y="0"/>
-</item>
-<item historyLabel="bsp.c" index="0">
-<position info="not_deleted" x="5928" y="0"/>
-</item>
-<item historyLabel="bsp.c" index="0">
-<position info="not_deleted" x="5726" y="0"/>
-</item>
-<item historyLabel="bsp.c" index="0">
-<position info="not_deleted" x="5769" y="0"/>
-</item>
 <item historyLabel="bsp.c" index="0">
 <position info="not_deleted" x="5928" y="0"/>
 </item>
@@ -424,8 +412,23 @@
 <item historyLabel="main.c" index="1">
 <position info="not_deleted" x="1195" y="0"/>
 </item>
-<item active="true" historyLabel="bsp.c" index="2">
+<item historyLabel="bsp.c" index="2">
 <position/>
+</item>
+<item historyLabel="main.c" index="3">
+<position info="not_deleted" x="1195" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="2">
+<position info="not_deleted" x="5431" y="0"/>
+</item>
+<item historyLabel="bsp.h" index="4">
+<position info="not_deleted" x="580" y="0"/>
+</item>
+<item historyLabel="bsp.c" index="2">
+<position info="not_deleted" x="5431" y="0"/>
+</item>
+<item active="true" historyLabel="main.c" index="5">
+<position info="not_deleted" x="1195" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
