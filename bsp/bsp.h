@@ -34,6 +34,6 @@ void bsp_init();
 uint16_t bsp_conversor_ADC (void) ;
 
 //prototipo de funcion USART
-void void bsp_USART_init();
+void bsp_USART_init();
 
 #endif

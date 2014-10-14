@@ -19,15 +19,12 @@
 #define LED_7 GPIO_Pin_10
 #define LED_8 GPIO_Pin_11
 
-
-
 /* Puertos de los leds disponibles */
 GPIO_TypeDef* leds_port[] = { GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD, GPIOD,
 		GPIOD };
 /* Leds disponibles */
 const uint16_t leds[] =
 		{ LED_1, LED_2, LED_3, LED_4, LED_5, LED_6, LED_7, LED_8 };
-
 
 //implementado la funcion de prender led con un arreglo
 void led_on(uint8_t led) {
@@ -38,18 +35,13 @@ void led_off(uint8_t led) {
 	GPIO_ResetBits(leds_port[led], leds[led]);
 }
 
-
-
-
-
 //funciones de configuracion
 void bsp_led_init();
 void bsp_USART_init();
 
-
 void bsp_init() {
 	bsp_led_init();
-
+	bsp_USART_init();
 }
 
 /**
@@ -64,7 +56,7 @@ void bsp_led_init() {
 	GPIO_InitStruct.GPIO_Pin |= GPIO_Pin_0 | GPIO_Pin_1;
 	GPIO_InitStruct.GPIO_Pin |= GPIO_Pin_2 | GPIO_Pin_3;
 	GPIO_InitStruct.GPIO_Pin |= GPIO_Pin_6 | GPIO_Pin_7;
-	GPIO_InitStruct.GPIO_Pin |= GPIO_Pin_10| GPIO_Pin_11;
+	GPIO_InitStruct.GPIO_Pin |= GPIO_Pin_10 | GPIO_Pin_11;
 
 	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_OUT;
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
@@ -72,7 +64,6 @@ void bsp_led_init() {
 	GPIO_InitStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	GPIO_Init(GPIOD, &GPIO_InitStruct);
 }
-
 
 //FUNCION ADC!
 uint16_t bsp_conversor_ADC(void) {
@@ -125,76 +116,80 @@ uint8_t porcentaje_potenciometro(uint16_t valor) {
 
 	uint8_t porcentaje; //lo veo como entero
 
-porcentaje=(valor*100)/4096;
+	porcentaje = (valor * 100) / 4096;
 
-return(porcentaje);
+	return (porcentaje);
 
 }
-
 
 //CREO LA FUNCION PARA CONFIGURAR LA  UART
-void bsp_USART_init(){
+void bsp_USART_init() {
 //defino las estructuras
-USART_InitTypeDef USART_InitStructure;
-GPIO_InitTypeDef GPIO_InitStructure;
+	USART_InitTypeDef USART_InitStructure;
+	GPIO_InitTypeDef GPIO_InitStructure;
 
-   // Habilito Clocks
-RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
-RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+	// Habilito Clocks
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
 
-   // Configuro Pin TX
-GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
-GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-GPIO_Init(GPIOD, &GPIO_InitStructure);
+	// Configuro Pin TX
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-GPIO_PinAFConfig(GPIOD, GPIO_PinSource8, GPIO_AF_USART3);
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource8, GPIO_AF_USART3);
 
-   //  Configuro Pin RX
-GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
-GPIO_Init(GPIOD, &GPIO_InitStructure);
+	//  Configuro Pin RX
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
+	GPIO_Init(GPIOD, &GPIO_InitStructure);
 
-GPIO_PinAFConfig(GPIOD, GPIO_PinSource9, GPIO_AF_USART3);
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource9, GPIO_AF_USART3);
 
 	//Configuro UART
-USART_InitStructure.USART_BaudRate = 9600;
-USART_InitStructure.USART_WordLength = USART_WordLength_8b;
-USART_InitStructure.USART_StopBits = USART_StopBits_1;
-USART_InitStructure.USART_Parity = USART_Parity_No;
-USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
-USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
+	USART_InitStructure.USART_BaudRate = 115200;
+	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
+	USART_InitStructure.USART_StopBits = USART_StopBits_1;
+	USART_InitStructure.USART_Parity = USART_Parity_No;
+	USART_InitStructure.USART_HardwareFlowControl =
+			USART_HardwareFlowControl_None;
+	USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
 
-    // Inicializo la USART
-USART_Init(USART3, &USART_InitStructure);
+	// Inicializo la USART
+	USART_Init(USART3, &USART_InitStructure);
 
-    // Habilito la Usart
-USART_Cmd(USART3, ENABLE);
+	// Habilito la Usart
+	USART_Cmd(USART3, ENABLE);
 
-    // Habilito la Interrupcion por RX
+	// Habilito la Interrupcion por RX
 
-		// USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
+	USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
 
 }
 
-
-
 //creo una funcion para enviar los datos y estos datos son de tipo char (un puntero de char)
-void enviar_string (char* datos ){
+void enviar_string(char* datos) {
+	int i = 0;
 
+	//USART_GetFlagStatus(USART3, USART_FLAG_TC); //leo el estado de la bandera de la USART.
+	//alguna de las 2 opciones de abajo debo usar
+	//	while (USART_GetFlagStatus(USART3, USART_SR_TXE) == 0 )
+	//USART_GetFlagStatus!=RESET
 
+	USART_ClearFlag(USART3,USART_FLAG_TC==0); //limpio la bandera
 
-USART_SendData (USART3, (uin16_t)*datos);//debo castear el dato par que sea un entero de 16bits
+	for (i = 0; i <= 18; i++) {
 
+		datos[i];
 
+		USART_SendData(USART3, (uint16_t) datos[i]); //debo castear el dato par que sea un entero de 16bits, aca estoy usando la funcion de la libreria de la USART
 
+		while (USART_GetFlagStatus(USART3, USART_FLAG_TC == RESET)) { //creo un bucle infinito, que espere a que se termine la conversion.
 
-
-
-
-
-
+		}
+	}
 }
 
