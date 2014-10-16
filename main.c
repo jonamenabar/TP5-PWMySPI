@@ -42,7 +42,7 @@ int main(void) {
 				&& porcentaje != previo_porcentaje - 2) {
 			previo_porcentaje = porcentaje;
 
-			sprintf(datos, "potenciometro %d % ", (uint16_t) porcentaje); //en vez de enviar el dato por pantalla, lo envia a un arreglo osea guarda el porcentaje en un arreglo y lo completa con nule (cero) al final
+			sprintf(datos, "potenciometro %d \n ", (uint16_t) porcentaje); //en vez de enviar el dato por pantalla, lo envia a un arreglo osea guarda el porcentaje en un arreglo y lo completa con nule (cero) al final
 			enviar_string(datos); //llama al a funcion enviar string
 
 		}

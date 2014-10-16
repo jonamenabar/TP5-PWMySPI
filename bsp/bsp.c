@@ -36,12 +36,13 @@ void led_off(uint8_t led) {
 }
 
 //funciones de configuracion
-void bsp_led_init();
-void bsp_USART_init();
+/*void bsp_led_init();
+ void bsp_USART_init();*/
 
 void bsp_init() {
 	bsp_led_init();
 	bsp_USART_init();
+	bsp_conversor_ADC();
 }
 
 /**
@@ -173,13 +174,11 @@ void bsp_USART_init() {
 //creo una funcion para enviar los datos y estos datos son de tipo char (un puntero de char)
 void enviar_string(char* datos) {
 	int i = 0;
+	int TEST;
+				TEST=USART_GetFlagStatus(USART3, USART_FLAG_TXE); //ESTO ES PARA PODER VER QUE VALOR TIENE EL FLAG
 
-	//USART_GetFlagStatus(USART3, USART_FLAG_TC); //leo el estado de la bandera de la USART.
-	//alguna de las 2 opciones de abajo debo usar
-	//	while (USART_GetFlagStatus(USART3, USART_SR_TXE) == 0 )
-	//USART_GetFlagStatus!=RESET
 
-	USART_ClearFlag(USART3, USART_FLAG_TC == 0); //limpio la bandera
+
 
 	for (i = 0; i <= 18; i++) {
 
@@ -187,9 +186,11 @@ void enviar_string(char* datos) {
 
 		USART_SendData(USART3, (uint16_t) datos[i]); //debo castear el dato par que sea un entero de 16bits, aca estoy usando la funcion de la libreria de la USART
 
-		while (USART_GetFlagStatus(USART3, USART_FLAG_TC == RESET)) { //creo un bucle infinito, que espere a que se termine la conversion.
+		while (USART_GetFlagStatus(USART3, USART_FLAG_TXE )== RESET) { //creo un bucle infinito, que espere a que se termine la conversion.
+
 
 		}
+
 	}
 }
 
